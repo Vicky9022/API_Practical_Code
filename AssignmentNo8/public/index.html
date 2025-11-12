@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Node.js Callback Demonstration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Node.js Callback Demonstration</h1>
+    <p>This example shows how Node.js handles asynchronous operations using callbacks.</p>
+    <button onclick="fetchMessage()">Read Message File</button>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    // Fetch message data from the server using callback-based reading
+    function fetchMessage() {
+      fetch("/get-message")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("output").innerText = data;
+        })
+        .catch(() => {
+          document.getElementById("output").innerText = "Error fetching message.";
+        });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1><%= title %></h1>
+  <form method="POST" action="/submit">
+    <input type="text" name="name" placeholder="Enter your name" required>
+    <input type="text" name="rollno" placeholder="Enter roll number" required>
+    <input type="text" name="class" placeholder="Enter class" required>
+    <input type="text" name="branch" placeholder="Enter branch" required>
+    <input type="number" name="age" placeholder="Enter age" required>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
